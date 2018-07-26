@@ -2,10 +2,31 @@
   "name": "@jahed/promises",
   "version": "0.0.1",
   "description": "Functions for Promises",
-  "main": "src/index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
-    "src"
+    "lib"
   ],
   "author": "Jahed Ahmed",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "lint": "tslint --project ./tsconfig.json",
+    "test": "jest",
+    "build": "rimraf lib && tsc",
+    "prepublishOnly": "yarn lint && yarn test && yarn build",
+    "push": "git push && git push --tags",
+    "docs": "bash -i ./docs.sh",
+    "postpublish": "yarn push && yarn docs"
+  },
+  "devDependencies": {
+    "@types/jest": "23.3.0",
+    "@types/node": "10.5.3",
+    "jest": "23.4.1",
+    "rimraf": "2.6.2",
+    "ts-jest": "23.0.1",
+    "tslint": "5.11.0",
+    "tslint-config-standard": "7.1.0",
+    "typedoc": "0.11.1",
+    "typescript": "2.9.2"
+  }
 }

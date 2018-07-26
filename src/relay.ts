@@ -1,5 +1,5 @@
-function relay (...steps) {
-  return initial => steps
+export function relay<I> (...steps: ((value: I) => any)[]) {
+  return (initial: I): Promise<I> => steps
     .reduce(
       (acc, next) => acc.then(
         baton => Promise.resolve(next(baton)).then(
@@ -9,5 +9,3 @@ function relay (...steps) {
       Promise.resolve(initial)
     )
 }
-
-module.exports = relay

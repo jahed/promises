@@ -1,5 +1,5 @@
-function compose (...steps) {
-  return initial => steps.reduce(
+export function compose (...steps: ((promise: Promise<any>) => Promise<any>)[]) {
+  return (initial: any) => steps.reduce(
     (acc, next) => acc.then(
       accResult => next(Promise.resolve(accResult)),
       accError => next(Promise.reject(accError))
@@ -7,5 +7,3 @@ function compose (...steps) {
     Promise.resolve(initial)
   )
 }
-
-module.exports = compose
