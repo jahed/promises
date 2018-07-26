@@ -19,7 +19,8 @@
     "build:docs": "rimraf docs && typedoc --theme default --exclude '**/*.test.ts' --out docs --mode file --target ES6",
     "push:git": "git push && git push --tags",
     "push:docs": "bash -i ./publish-docs.sh",
-    "prepublishOnly": "yarn lint && yarn test && yarn build:lib && yarn build:docs && yarn push:git && yarn push:docs"
+    "prepublishOnly": "yarn lint && yarn test && yarn build:lib && yarn build:docs",
+    "postpublish": "yarn push:git && yarn push:docs"
   },
   "devDependencies": {
     "@types/jest": "23.3.0",
