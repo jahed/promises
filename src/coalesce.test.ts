@@ -1,4 +1,4 @@
-import { coalesce } from "./coalesce"
+import { coalesce } from './coalesce'
 
 it('resolves to the first resolved value', () => {
   const result = coalesce(

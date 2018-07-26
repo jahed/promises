@@ -1,4 +1,4 @@
-import { branch } from "./branch"
+import { branch } from './branch'
 
 it('resolves through the fulfilled branch', () => {
   const fn = branch(
