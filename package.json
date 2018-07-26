@@ -17,14 +17,13 @@
     "build:docs": "rimraf docs && typedoc --theme default --exclude '**/*.test.ts' --out docs --mode file --target ES6",
     "push:git": "git push && git push --tags",
     "push:docs": "bash -i ./publish-docs.sh",
-    "prepublishOnly": "yarn lint && yarn test && standard-version && yarn build:lib && yarn build:docs && yarn push:git && yarn push:docs"
+    "prepublishOnly": "yarn lint && yarn test && yarn build:lib && yarn build:docs && yarn push:git && yarn push:docs"
   },
   "devDependencies": {
     "@types/jest": "23.3.0",
     "@types/node": "10.5.3",
     "jest": "23.4.1",
     "rimraf": "2.6.2",
-    "standard-version": "4.4.0",
     "ts-jest": "23.0.1",
     "tslint": "5.11.0",
     "tslint-config-standard": "7.1.0",
