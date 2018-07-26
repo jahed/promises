@@ -78,7 +78,7 @@ doSomething('input')
 
 ## Contributions
 
-This package is a work-in-progress and will grow and more needs arise.
+This package is a work-in-progress and will grow as more needs arise.
 
 Is there a function or use-case you have that's not covered by this package?
 Submit an issue or pull request with your ideas and let's discuss!
