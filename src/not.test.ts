@@ -2,7 +2,7 @@ import { not } from './not'
 
 it('rejects a resolved value', () => {
   const result = not(Promise.resolve('value'))
-  return expect(result).rejects.toThrow(`expected rejection but got "value"`)
+  return expect(result).rejects.toThrow(`rejected "value"`)
 })
 
 it('resolves a rejected value', () => {
