@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 set -ex
 
-typedoc --theme default --exclude '**/*.test.ts' --out docs --mode file --target ES6
-
 cd ./docs
 
 touch .nojekyll
