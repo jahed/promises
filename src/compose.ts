@@ -1,4 +1,4 @@
-export function compose (...steps: ((promise: Promise<any>) => Promise<any>)[]) {
+export function compose (...steps: ((promise: Promise<any>) => Promise<any> | any)[]) {
   return (initial: any) => steps.reduce(
     (acc, next) => acc.then(
       accResult => next(Promise.resolve(accResult)),
