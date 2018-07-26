@@ -17,7 +17,7 @@ it('rejects when one rejects', () => {
   const fn = snowball(
     () => ({ b: 'two' }),
     () => Promise.reject(new Error('nope')),
-    () => ({ c: 'three' }),
+    () => ({ c: 'three' })
   )
   const result = fn({ a: 'one' })
   return expect(result).rejects.toThrow('nope')
