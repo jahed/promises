@@ -5,8 +5,8 @@
  * reason.
  *
  * You can think of this like a Relay Race in sports. The baton is the passed
- * to the next runner and doesn't change. If a runner trips, they other runners
- * won't receive the baton and the team fails.
+ * to the next runner and doesn't change. If a runner drops the baton, the other
+ * runners won't receive the baton and the team fails.
  */
 export function relay<I> (...steps: ((value: I) => any)[]) {
   return (initial: I): Promise<I> => steps
