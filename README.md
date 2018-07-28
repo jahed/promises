@@ -11,6 +11,10 @@ Changing a component from sync to async should not require a large rewrite. By
 using functions, we can abstract those differences out for a more consistent and
 flexible approach.
 
+### Useful Links
+
+- [Documentation](https://jahed.github.io/promises)
+
 ## Installation
 
 ```bash
@@ -23,7 +27,8 @@ npm install @jahed/promises
 
 ## Usage
 
-See `src/[function].test.js` for usage examples.
+See the [documentation](https://jahed.github.io/promises) and
+`src/[function].test.js` for usage examples.
 
 Here's a bigger abstract example using multiple functions together.
 
