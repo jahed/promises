@@ -3,9 +3,11 @@
   "version": "0.1.2",
   "description": "Functions for Promises",
   "main": "lib/index.js",
+  "module": "es/index.js",
   "types": "lib/index.d.ts",
   "files": [
     "lib",
+    "es",
     "docs"
   ],
   "sideEffects": false,
@@ -13,13 +15,14 @@
   "license": "MIT",
   "repository": "https://github.com/jahed/promises",
   "scripts": {
-    "lint": "tslint --project ./tsconfig.json",
+    "lint": "tslint",
     "test": "jest",
     "build:lib": "rimraf lib && tsc",
-    "build:docs": "rimraf docs && typedoc --theme default --exclude '**/*.test.ts' --out docs --mode file --target ES6",
+    "build:es": "rimraf es && tsc --outDir ./es/ --target es6 --module es6",
+    "build:docs": "rimraf docs && typedoc --theme default --out docs --mode file",
     "push:git": "git push && git push --tags",
     "push:docs": "bash -i ./publish-docs.sh",
-    "prepublishOnly": "yarn lint && yarn test && yarn build:lib && yarn build:docs",
+    "prepublishOnly": "yarn lint && yarn test && yarn build:lib && yarn build:es && yarn build:docs",
     "postpublish": "yarn push:git && yarn push:docs"
   },
   "devDependencies": {
