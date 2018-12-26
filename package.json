@@ -15,7 +15,7 @@
   "license": "MIT",
   "repository": "https://github.com/jahed/promises",
   "scripts": {
-    "lint": "tslint",
+    "lint": "tslint --project tsconfig.json",
     "test": "jest",
     "build:lib": "rimraf lib && tsc",
     "build:es": "rimraf es && tsc --outDir ./es/ --target es6 --module es6",
