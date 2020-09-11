@@ -13,6 +13,11 @@ Changing a component from sync to async should not require a large rewrite. By
 using functions, we can abstract those differences out for a more consistent and
 flexible approach.
 
+This approach is especially powerful in plain JavaScript where there's no
+typechecking to ensure you're use handling promises correctly. In statically typed
+languages like TypeScript, you may prefer the standard async/await syntax as it's
+built into the language and can flag incorrect handling of promises.
+
 ### Useful Links
 
 - [Documentation](https://jahed.github.io/promises)
