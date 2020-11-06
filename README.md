@@ -1,6 +1,5 @@
 # @jahed/promises
 
-[![Travis](https://img.shields.io/travis/jahed/promises.svg)](https://travis-ci.org/jahed/promises)
 [![npm](https://img.shields.io/npm/v/@jahed/promises.svg)](https://www.npmjs.com/package/@jahed/promises)
 [![Patreon](https://img.shields.io/badge/patreon-donate-f96854.svg)](https://www.patreon.com/jahed)
 [![Liberapay](https://img.shields.io/badge/liberapay-donate-d9b113.svg)](https://liberapay.com/jahed)
@@ -40,14 +39,14 @@ See the [documentation](https://jahed.github.io/promises) and
 Here's a bigger abstract example using multiple functions together.
 
 ```js
-import { 
-  compose, 
-  relay, 
-  not, 
-  branch, 
-  waterfall, 
-  every, 
-  doNothing 
+import {
+  compose,
+  relay,
+  not,
+  branch,
+  waterfall,
+  every,
+  doNothing
 } from '@jahed/promises'
 
 const setup = waterfall(
